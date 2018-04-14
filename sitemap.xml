@@ -3,7 +3,17 @@
 
     <sitemap>
         <loc>https://devmozz.github.io/post-sitemap.xml</loc>
-        <lastmod>2018-04-14T09:21:45.270Z</lastmod>
+        <lastmod>2018-04-14T09:30:31.650Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://devmozz.github.io/category-sitemap.xml</loc>
+        <lastmod>2018-04-14T09:30:31.650Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://devmozz.github.io/tag-sitemap.xml</loc>
+        <lastmod>2018-04-14T09:30:31.650Z</lastmod>
     </sitemap>
 
 </sitemapindex>
