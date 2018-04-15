@@ -42,9 +42,9 @@
     
       <category term="Android" scheme="https://devmozz.github.io/tags/Android/"/>
     
-      <category term="RxJava" scheme="https://devmozz.github.io/tags/RxJava/"/>
-    
       <category term="Retrofit" scheme="https://devmozz.github.io/tags/Retrofit/"/>
+    
+      <category term="RxJava" scheme="https://devmozz.github.io/tags/RxJava/"/>
     
   </entry>
   
