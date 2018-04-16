@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Android,Retrofit,RxJava" />
     
-    <meta name="description" content="개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.  Retrofit +  RxJava를 사용해서 HTTP RESTAPI 구현 프로젝트에 사용할 준비물먼저 라이브러리를 Gradle에 다음과 같이 추가하고 적용한다. 1234567891011//Retrof">
+    <meta name="description" content="개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.  Retrofit + RxJava를 사용해서 HTTP RESTAPI 구현   프로젝트에 사용할 준비물먼저 라이브러리를 Gradle에 다음과 같이 추가하고 적용한다. 1234567891011//Retro">
 <meta name="keywords" content="Android,Retrofit,RxJava">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android - Retrofit and RxJava">
 <meta property="og:url" content="https://devmozz.github.io/2018/04/16/r2nrj/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.  Retrofit +  RxJava를 사용해서 HTTP RESTAPI 구현 프로젝트에 사용할 준비물먼저 라이브러리를 Gradle에 다음과 같이 추가하고 적용한다. 1234567891011//Retrof">
+<meta property="og:description" content="개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.  Retrofit + RxJava를 사용해서 HTTP RESTAPI 구현   프로젝트에 사용할 준비물먼저 라이브러리를 Gradle에 다음과 같이 추가하고 적용한다. 1234567891011//Retro">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://devmozz.github.io/2018/04/16/r2nrj/jsonfake.gif">
-<meta property="og:updated_time" content="2018-04-15T23:52:46.676Z">
+<meta property="og:updated_time" content="2018-04-16T00:07:22.565Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android - Retrofit and RxJava">
-<meta name="twitter:description" content="개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.  Retrofit +  RxJava를 사용해서 HTTP RESTAPI 구현 프로젝트에 사용할 준비물먼저 라이브러리를 Gradle에 다음과 같이 추가하고 적용한다. 1234567891011//Retrof">
+<meta name="twitter:description" content="개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.  Retrofit + RxJava를 사용해서 HTTP RESTAPI 구현   프로젝트에 사용할 준비물먼저 라이브러리를 Gradle에 다음과 같이 추가하고 적용한다. 1234567891011//Retro">
 <meta name="twitter:image" content="https://devmozz.github.io/2018/04/16/r2nrj/jsonfake.gif">
     
     <link rel="canonical" href="https://devmozz.github.io/2018/04/16/r2nrj/"/>
@@ -178,8 +178,10 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
             <blockquote>
 <p>개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.<br>잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.</p>
+<ul>
+<li><strong><a href="http://square.github.io/retrofit/" target="_blank" rel="noopener">Retrofit</a></strong> + <strong><a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="noopener">RxJava</a></strong>를 사용해서 HTTP RESTAPI 구현</li>
+</ul>
 </blockquote>
-<p><strong><a href="http://square.github.io/retrofit/" target="_blank" rel="noopener">Retrofit</a></strong> +  <strong><a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="noopener">RxJava</a></strong>를 사용해서 HTTP RESTAPI 구현</p>
 <h1 id="프로젝트에-사용할-준비물"><a href="#프로젝트에-사용할-준비물" class="headerlink" title="프로젝트에 사용할 준비물"></a>프로젝트에 사용할 준비물</h1><p>먼저 라이브러리를 <strong>Gradle</strong>에 다음과 같이 추가하고 적용한다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Retrofit2</span></span><br><span class="line">implementation <span class="string">'com.squareup.retrofit2:converter-gson:2.3.0'</span></span><br><span class="line">implementation <span class="string">'com.squareup.retrofit2:adapter-rxjava2:2.3.0'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//RxJava</span></span><br><span class="line">implementation <span class="string">"io.reactivex.rxjava2:rxjava:2.1.7"</span></span><br><span class="line">implementation <span class="string">"io.reactivex.rxjava2:rxandroid:2.0.1"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Support</span></span><br><span class="line">implementation <span class="string">'com.android.support:cardview-v7:27.1.1'</span></span><br><span class="line">implementation <span class="string">'com.android.support:recyclerview-v7:27.1.1'</span></span><br></pre></td></tr></table></figure>
 <p><em>AndroidMenifest.xml</em>에 <em>Internt</em>을 추가한다.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:name=<span class="string">"android.permission.INTERNET"</span>/&gt;</span><br></pre></td></tr></table></figure></p>
