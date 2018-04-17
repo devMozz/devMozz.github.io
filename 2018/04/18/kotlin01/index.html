@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Kotlin - Function, Variable and Class | </title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Android,Kotlin" />
+    
+    <meta name="description" content="Function 이해하기  2자리 숫자 사이에서 최대 값을 찾는다.123456789fun max2Numbers(a: Int, b: Int): Int &amp;#123;    return if (a &amp;gt; b) a else b&amp;#125;//단순화 된 방식으로 위의 기능을 다시 정의fun max2Numbers(a: Int, b: Int): Int = if (a">
+<meta name="keywords" content="Android,Kotlin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin - Function, Variable and Class">
+<meta property="og:url" content="https://devmozz.github.io/2018/04/18/kotlin01/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="Function 이해하기  2자리 숫자 사이에서 최대 값을 찾는다.123456789fun max2Numbers(a: Int, b: Int): Int &amp;#123;    return if (a &amp;gt; b) a else b&amp;#125;//단순화 된 방식으로 위의 기능을 다시 정의fun max2Numbers(a: Int, b: Int): Int = if (a">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://devmozz.github.io/2018/04/18/kotlin01/20170608001348.png">
+<meta property="og:updated_time" content="2018-04-17T23:48:59.266Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kotlin - Function, Variable and Class">
+<meta name="twitter:description" content="Function 이해하기  2자리 숫자 사이에서 최대 값을 찾는다.123456789fun max2Numbers(a: Int, b: Int): Int &amp;#123;    return if (a &amp;gt; b) a else b&amp;#125;//단순화 된 방식으로 위의 기능을 다시 정의fun max2Numbers(a: Int, b: Int): Int = if (a">
+<meta name="twitter:image" content="https://devmozz.github.io/2018/04/18/kotlin01/20170608001348.png">
+    
+    <link rel="canonical" href="https://devmozz.github.io/2018/04/18/kotlin01/"/>
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-117529747-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">No Coffee? No Coding!</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Android/">Android</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Android/Kotlin/">Kotlin</a></li></ul></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Android/Kotlin/">Kotlin</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-kotlin01" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Kotlin - Function, Variable and Class
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/04/18/kotlin01/" class="article-date">
+            <time datetime="2018-04-17T22:03:43.000Z" itemprop="datePublished">2018-04-18</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Android/">Android</a>, <a class="tag-link" href="/tags/Kotlin/">Kotlin</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <img src="/2018/04/18/kotlin01/20170608001348.png" title="KOTLIN">
+<blockquote>
+<p>Function 이해하기</p>
+<ul>
+<li>2자리 숫자 사이에서 최대 값을 찾는다.<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">fun <span class="title">max2Numbers</span><span class="params">(a: Int, b: Int)</span>: Int </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">if</span> (a &gt; b) a <span class="keyword">else</span> b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//단순화 된 방식으로 위의 기능을 다시 정의</span></span><br><span class="line"><span class="function">fun <span class="title">max2Numbers</span><span class="params">(a: Int, b: Int)</span>: Int </span>= <span class="keyword">if</span> (a &gt; b) a <span class="keyword">else</span> b</span><br><span class="line"></span><br><span class="line"><span class="function">fun <span class="title">main</span><span class="params">(args: Array&lt;String&gt;)</span> </span>&#123;</span><br><span class="line">    println(<span class="string">"최대 값은 : $&#123;max2Numbers(1000, 100)&#125;"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>최대 값은 : 1000</li>
+</ul>
+<hr>
+<blockquote>
+<p>Variable 이해하기<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Mutable reference</span></span><br><span class="line">var a = <span class="number">100L</span> <span class="comment">// Long</span></span><br><span class="line"><span class="comment">//Immutable reference</span></span><br><span class="line">val b = <span class="number">0.1F</span> <span class="comment">// Float</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//변수를 명시적으로 선언하기</span></span><br><span class="line">var a: Int = <span class="number">10</span></span><br><span class="line">var <span class="keyword">char</span>: Char = <span class="string">'C'</span></span><br><span class="line">var string: String = <span class="string">"Demo"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Multi lines String</span></span><br><span class="line">var string: String = <span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">    첫번 째 라인</span></span><br><span class="line"><span class="string">    두번 째 라인</span></span><br><span class="line"><span class="string">    세번 째 라인</span></span><br><span class="line"><span class="string">    "</span><span class="string">""</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Array</span></span><br><span class="line">var arrayNumber: IntArray = intArrayOf(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>)</span><br><span class="line">var arrayLong: LongArray = longArrayOf(<span class="number">1000L</span>, <span class="number">2000L</span>, <span class="number">3000L</span>, <span class="number">4000L</span>)</span><br><span class="line">var arrayFloat: FloatArray = floatArrayOf(<span class="number">0.1f</span>, <span class="number">0.2f</span>, <span class="number">0.3f</span>, <span class="number">0.4f</span>)</span><br><span class="line">var arrayDouble: DoubleArray = doubleArrayOf(<span class="number">0.1</span>, <span class="number">0.2</span>, <span class="number">0.3</span>, <span class="number">0.4</span>)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>클래스와 속성 이해하기<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Java class</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> gender; <span class="comment">// 0은 여자, 1은 남자</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age, <span class="keyword">boolean</span> gender)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.gender = gender;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> name; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123; <span class="keyword">this</span>.name = name; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> age; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123; <span class="keyword">this</span>.age = age; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isGender</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> gender; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setGender</span><span class="params">(<span class="keyword">boolean</span> gender)</span> </span>&#123; <span class="keyword">this</span>.gender = gender; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<ul>
+<li>2개의 생성자, 3개의 Properties와 Setter/Getter… 늘 이런식으로 클래스를 만들어야만 했다.</li>
+<li>Kotlin은 정말 심플하게 클래스를 정의할 수 있다.</li>
+<li><p>단 1줄 이면 가능하다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Kotlin class</span></span><br><span class="line">class Person(var name: String, var age: Int, var gender: Boolean)</span><br><span class="line"></span><br><span class="line"><span class="function">fun <span class="title">main</span><span class="params">(args: Array&lt;String&gt;)</span> </span>&#123;</span><br><span class="line">    var person = Person(<span class="string">"Mozz"</span>, <span class="number">28</span>, <span class="keyword">false</span>)</span><br><span class="line">    println(<span class="string">"Before"</span>)</span><br><span class="line">    println(<span class="string">"Person.Person 이름 : $&#123;person.name&#125;"</span>)</span><br><span class="line">    println(<span class="string">"Person.Person 나이 : $&#123;person.age&#125;"</span>)</span><br><span class="line">    println(<span class="string">"Person.Person 성별 : $&#123;person.gender&#125;"</span>)</span><br><span class="line"></span><br><span class="line">    println()</span><br><span class="line"></span><br><span class="line">    person = Person(<span class="string">"Mily"</span>, <span class="number">18</span>, <span class="keyword">true</span>)</span><br><span class="line">    println(<span class="string">"After..."</span>)</span><br><span class="line">    person.age = <span class="number">10</span></span><br><span class="line">    person.name = <span class="string">"Mily"</span></span><br><span class="line">    person.gender = <span class="keyword">true</span></span><br><span class="line">    println(<span class="string">"Person.Person 이름 : $&#123;person.name&#125;"</span>)</span><br><span class="line">    println(<span class="string">"Person.Person 나이 : $&#123;person.age&#125;"</span>)</span><br><span class="line">    println(<span class="string">"Person.Person 성별 : $&#123;person.gender&#125;"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>예제 만들기</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Rectangle(val height: Int, val width: Int) &#123;</span><br><span class="line">    val isSquare: Boolean</span><br><span class="line">        get() = height == width</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Random</span><br><span class="line"></span><br><span class="line"><span class="function">fun <span class="title">main</span><span class="params">(args: Array&lt;String&gt;)</span> </span>&#123;</span><br><span class="line">    val random = Random()</span><br><span class="line">    val rectangle = Rectangle(random.nextInt(), random.nextInt())</span><br><span class="line">    println(<span class="string">"높이? $&#123;rectangle.height&#125;"</span>)</span><br><span class="line">    println(<span class="string">"넓이? $&#123;rectangle.width&#125;"</span>)</span><br><span class="line">    println(<span class="string">"동그라미? $&#123;rectangle.isSquare&#125;"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>높이? 1009213259</p>
+</li>
+<li>넓이? -259066241</li>
+<li>동그라미? false (직사각형이 될 일이 있을까?)</li>
+</ul>
+<p>오늘은 여기까지…….</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://devmozz.github.io/2018/04/18/kotlin01/" data-id="cjg47wm3k0001r22fkmt4z7o3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/devMozz/" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/04/16/r2nrj/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Android - Retrofit and RxJava</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/18/kotlin01/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/04/18/kotlin01/20170608001348.png)" alt="Kotlin - Function, Variable and Class" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Android/Kotlin/">Kotlin</a></p>
+                            <p class="item-title"><a href="/2018/04/18/kotlin01/" class="title">Kotlin - Function, Variable and Class</a></p>
+                            <p class="item-date"><time datetime="2018-04-17T22:03:43.000Z" itemprop="datePublished">2018-04-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/16/r2nrj/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/04/16/r2nrj/jsonfake.gif)" alt="Android - Retrofit and RxJava" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Android/">Android</a></p>
+                            <p class="item-title"><a href="/2018/04/16/r2nrj/" class="title">Android - Retrofit and RxJava</a></p>
+                            <p class="item-date"><time datetime="2018-04-15T20:56:57.000Z" itemprop="datePublished">2018-04-16</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/14/bnv/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/04/14/bnv/bottomnavigationview.gif)" alt="Android Design Support Library - BottomNavigationView" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Android/">Android</a></p>
+                            <p class="item-title"><a href="/2018/04/14/bnv/" class="title">Android Design Support Library - BottomNavigationView</a></p>
+                            <p class="item-date"><time datetime="2018-04-14T09:21:45.000Z" itemprop="datePublished">2018-04-14</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/Kotlin/">Kotlin</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Design-Widget/">Android Design Widget</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kotlin/">Kotlin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Retrofit/">Retrofit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava/">RxJava</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Support-Library/">Support Library</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Design-Widget/" style="font-size: 10px;">Android Design Widget</a> <a href="/tags/Kotlin/" style="font-size: 10px;">Kotlin</a> <a href="/tags/Retrofit/" style="font-size: 10px;">Retrofit</a> <a href="/tags/RxJava/" style="font-size: 10px;">RxJava</a> <a href="/tags/Support-Library/" style="font-size: 10px;">Support Library</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 Ha YunHyeong</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'devMozz';
+    
+    
+    var disqus_url = 'https://devmozz.github.io/2018/04/18/kotlin01/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
