@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://devmozz.github.io/"/>
-  <updated>2018-04-17T23:55:12.087Z</updated>
+  <updated>2018-04-20T22:13:29.551Z</updated>
   <id>https://devmozz.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Kotlin - Casting Object(객체 타입 변환)</title>
+    <link href="https://devmozz.github.io/2018/04/21/kotlin02/"/>
+    <id>https://devmozz.github.io/2018/04/21/kotlin02/</id>
+    <published>2018-04-20T20:14:58.000Z</published>
+    <updated>2018-04-20T22:13:29.551Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.<br>잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.</p></blockquote><img src="/2018/04/21/kotlin02/20170608001348.png" title="KOTLIN"><hr><h1 id="Casting-Object-이해하기"><a href="#Casting-Object-이해하기" class="headerlink" title="Casting Object 이해하기"></a>Casting Object 이해하기</h1><p>Type Conversion은 2가지 형태로 나눈다</p><ul><li>Implicit Conversion<ul><li>암시적으로 컴파일러가 자동으로 데이터 유형을 변환한다.</li></ul></li><li>Explicit Conversion<ul><li>변환 할 데이터 유형을 명시적으로 지정한다는 것을 의미한다.</li><li>예) String.valueOf, Integer.parseInt… 등..</li></ul></li></ul><p>자료형 변환</p><ul><li>Data Type Bigger(Safe Cast)<ul><li>Byte &gt; Short &gt; Int &gt; Long &gt; Float &gt; Double</li><li>예) Int에서 Double로 변환</li></ul></li><li>Data Type Smaller(Unsafe Cast)<ul><li>Double &gt; Float &gt; Long &gt; Int &gt; Short &gt; Byte</li><li>데이터가 큰 저장 영역에서 작은 데이터 영역으로 이동할 때 데이터가 손실이 되기 때문에 안전하지 않다</li></ul></li></ul><hr><h1 id="Kotlin-Casting-Object-이해하기"><a href="#Kotlin-Casting-Object-이해하기" class="headerlink" title="Kotlin Casting Object 이해하기"></a>Kotlin Casting Object 이해하기</h1><p>Implicit Conversion을 지원하지 않는다.</p><ul><li>Kotlin은 컴파일러가 의도를 추측하는 것을 극도로 싫어한다.</li><li>숫자 형식 변환을 포함해서 언어의 모든 내용을 명시적으로 표현해야 한다.</li></ul><p>Explicit Conversion Method(명시적 변환 메소드)</p><ul><li>toByte(): Byte</li><li>toShort(): Short</li><li>toInt(): Int</li><li>toLong(): Long</li><li>toFloat(): Float</li><li>toDouble(): Double</li><li>toChar(): Char</li></ul><blockquote><p>String &gt; Int로 변환<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">fun <span class="title">main</span><span class="params">(args: Array&lt;String&gt;)</span> </span>&#123;</span><br><span class="line">    var a = <span class="string">"20"</span></span><br><span class="line">    var b = <span class="string">"30"</span></span><br><span class="line"></span><br><span class="line">    var result = a.toInt() + b.toInt()</span><br><span class="line">    print(<span class="string">"$&#123;result&#125;"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// result = 50</span></span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p>변수에 data type을 return<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">fun <span class="title">main</span><span class="params">(args: Array&lt;String&gt;)</span> </span>&#123;</span><br><span class="line">    var a = <span class="number">1000</span></span><br><span class="line">    print(<span class="string">"a data type? $&#123;a.javaClass.kotlin.qualifiedName&#125;"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// a data type? kotlin.Int</span></span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p>Safe cast<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">fun <span class="title">main</span><span class="params">(args: Array&lt;String&gt;)</span> </span>&#123;</span><br><span class="line">    var a = <span class="number">100</span></span><br><span class="line">    var b: Long = a.toLong()</span><br><span class="line">    print(<span class="string">"b data type? $&#123;b.javaClass.kotlin.qualifiedName&#125;"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// b data type? kotlin.Long</span></span><br></pre></td></tr></table></figure></p></blockquote><ul><li>데이터 손실이 없다.</li></ul><blockquote><p>Unsafe cast<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">fun <span class="title">main</span><span class="params">(args: Array&lt;String&gt;)</span> </span>&#123;</span><br><span class="line">    var a: Float = <span class="number">100.2f</span></span><br><span class="line">    var b: Int = a.toInt()</span><br><span class="line">    print(<span class="string">"b data type? $&#123;b.javaClass.kotlin.qualifiedName&#125;"</span>)</span><br><span class="line">    print(<span class="string">"b: $&#123;b&#125;"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// b data type? kotlin.Int</span></span><br><span class="line"><span class="comment">// b: 100</span></span><br></pre></td></tr></table></figure></p></blockquote><ul><li>0.2에 데이터 손실이 생겼다(아까워라 T_T).</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.&lt;br&gt;잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img src=&quot;/2018
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="https://devmozz.github.io/categories/Android/"/>
+    
+      <category term="Kotlin" scheme="https://devmozz.github.io/categories/Android/Kotlin/"/>
+    
+    
+      <category term="Android" scheme="https://devmozz.github.io/tags/Android/"/>
+    
+      <category term="Kotlin" scheme="https://devmozz.github.io/tags/Kotlin/"/>
+    
+      <category term="Casting" scheme="https://devmozz.github.io/tags/Casting/"/>
+    
+      <category term="Type" scheme="https://devmozz.github.io/tags/Type/"/>
+    
+      <category term="Object" scheme="https://devmozz.github.io/tags/Object/"/>
+    
+      <category term="Safe" scheme="https://devmozz.github.io/tags/Safe/"/>
+    
+      <category term="Unsafe" scheme="https://devmozz.github.io/tags/Unsafe/"/>
+    
+      <category term="Implicit" scheme="https://devmozz.github.io/tags/Implicit/"/>
+    
+      <category term="Explicit" scheme="https://devmozz.github.io/tags/Explicit/"/>
+    
+      <category term="Conversion" scheme="https://devmozz.github.io/tags/Conversion/"/>
+    
+  </entry>
   
   <entry>
     <title>Kotlin - Function, Variable and Class</title>
