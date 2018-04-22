@@ -3,28 +3,28 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Kotlin - Function, Variable and Class | </title>
+    <title>Android - TTS(TextToSpeech) 문자를 음성으로 출력하기 | </title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Android,Kotlin" />
+        <meta name="keywords" content="Android,TTS,TextToSpeech" />
     
-    <meta name="description" content="개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.    Function 이해하기  2자리 숫자 사이에서 최대 값을 찾는다.123456789fun max2Numbers(a: Int, b: Int): Int &amp;#123;    return if (a &amp;gt">
-<meta name="keywords" content="Android,Kotlin">
+    <meta name="description" content="개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.  텍스트를 음성으로 읽어주는 기능이 있어서 소개하려고 한다.     Layout resource file 텍스트를 입력할 EditText, 클릭하면 음성 출력을 실행시킬 버튼으로 구성  12345678">
+<meta name="keywords" content="Android,TTS,TextToSpeech">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kotlin - Function, Variable and Class">
-<meta property="og:url" content="https://devmozz.github.io/2018/04/18/kotlin01/index.html">
+<meta property="og:title" content="Android - TTS(TextToSpeech) 문자를 음성으로 출력하기">
+<meta property="og:url" content="https://devmozz.github.io/2018/04/23/text-to-speech/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.    Function 이해하기  2자리 숫자 사이에서 최대 값을 찾는다.123456789fun max2Numbers(a: Int, b: Int): Int &amp;#123;    return if (a &amp;gt">
+<meta property="og:description" content="개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.  텍스트를 음성으로 읽어주는 기능이 있어서 소개하려고 한다.     Layout resource file 텍스트를 입력할 EditText, 클릭하면 음성 출력을 실행시킬 버튼으로 구성  12345678">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://devmozz.github.io/2018/04/18/kotlin01/20170608001348.png">
-<meta property="og:updated_time" content="2018-04-17T23:55:12.087Z">
+<meta property="og:image" content="https://devmozz.github.io/2018/04/23/text-to-speech/android_image.png">
+<meta property="og:updated_time" content="2018-04-22T21:44:00.744Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kotlin - Function, Variable and Class">
-<meta name="twitter:description" content="개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.    Function 이해하기  2자리 숫자 사이에서 최대 값을 찾는다.123456789fun max2Numbers(a: Int, b: Int): Int &amp;#123;    return if (a &amp;gt">
-<meta name="twitter:image" content="https://devmozz.github.io/2018/04/18/kotlin01/20170608001348.png">
+<meta name="twitter:title" content="Android - TTS(TextToSpeech) 문자를 음성으로 출력하기">
+<meta name="twitter:description" content="개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.  텍스트를 음성으로 읽어주는 기능이 있어서 소개하려고 한다.     Layout resource file 텍스트를 입력할 EditText, 클릭하면 음성 출력을 실행시킬 버튼으로 구성  12345678">
+<meta name="twitter:image" content="https://devmozz.github.io/2018/04/23/text-to-speech/android_image.png">
     
-    <link rel="canonical" href="https://devmozz.github.io/2018/04/18/kotlin01/"/>
+    <link rel="canonical" href="https://devmozz.github.io/2018/04/23/text-to-speech/"/>
     
 
     
@@ -140,18 +140,18 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Android/Kotlin/">Kotlin</a>
+    <a class="page-title-link" href="/categories/Android/">Android</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-kotlin01" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-text-to-speech" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Kotlin - Function, Variable and Class
+        Android - TTS(TextToSpeech) 문자를 음성으로 출력하기
         </h1>
     
 
@@ -161,15 +161,15 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/04/18/kotlin01/" class="article-date">
-            <time datetime="2018-04-17T22:03:43.000Z" itemprop="datePublished">2018-04-18</time>
+        <a href="/2018/04/23/text-to-speech/" class="article-date">
+            <time datetime="2018-04-22T20:54:29.000Z" itemprop="datePublished">2018-04-23</time>
         </a>
     </div>
 
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Android/">Android</a>, <a class="tag-link" href="/tags/Kotlin/">Kotlin</a>
+        <a class="tag-link" href="/tags/Android/">Android</a>, <a class="tag-link" href="/tags/TTS/">TTS</a>, <a class="tag-link" href="/tags/TextToSpeech/">TextToSpeech</a>
     </div>
 
             </div>
@@ -178,41 +178,20 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
             <blockquote>
 <p>개인 공부 후 자료를 남기기 위한 목적임으로 내용 상에 큰 문제가 있을 수도 있습니다.<br>잘못된 내용이 있다면 언제든지 편하게 댓글 남겨주시면 감사하겠습니다.</p>
-</blockquote>
-<img src="/2018/04/18/kotlin01/20170608001348.png" title="KOTLIN">
-<blockquote>
-<p>Function 이해하기</p>
 <ul>
-<li>2자리 숫자 사이에서 최대 값을 찾는다.<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">fun <span class="title">max2Numbers</span><span class="params">(a: Int, b: Int)</span>: Int </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">if</span> (a &gt; b) a <span class="keyword">else</span> b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//단순화 된 방식으로 위의 기능을 다시 정의</span></span><br><span class="line"><span class="function">fun <span class="title">max2Numbers</span><span class="params">(a: Int, b: Int)</span>: Int </span>= <span class="keyword">if</span> (a &gt; b) a <span class="keyword">else</span> b</span><br><span class="line"></span><br><span class="line"><span class="function">fun <span class="title">main</span><span class="params">(args: Array&lt;String&gt;)</span> </span>&#123;</span><br><span class="line">    println(<span class="string">"최대 값은 : $&#123;max2Numbers(1000, 100)&#125;"</span>)</span><br></pre></td></tr></table></figure>
-</li>
+<li>텍스트를 음성으로 읽어주는 기능이 있어서 소개하려고 한다.</li>
 </ul>
 </blockquote>
-<ul>
-<li>최대 값은 : 1000</li>
-</ul>
+<img src="/2018/04/23/text-to-speech/android_image.png">
 <hr>
-<blockquote>
-<p>Variable 이해하기<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Mutable reference</span></span><br><span class="line">var a = <span class="number">100L</span> <span class="comment">// Long</span></span><br><span class="line"><span class="comment">//Immutable reference</span></span><br><span class="line">val b = <span class="number">0.1F</span> <span class="comment">// Float</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//변수를 명시적으로 선언하기</span></span><br><span class="line">var a: Int = <span class="number">10</span></span><br><span class="line">var <span class="keyword">char</span>: Char = <span class="string">'C'</span></span><br><span class="line">var string: String = <span class="string">"Demo"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Multi lines String</span></span><br><span class="line">var string: String = <span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">    첫번 째 라인</span></span><br><span class="line"><span class="string">    두번 째 라인</span></span><br><span class="line"><span class="string">    세번 째 라인</span></span><br><span class="line"><span class="string">    "</span><span class="string">""</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Array</span></span><br><span class="line">var arrayNumber: IntArray = intArrayOf(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>)</span><br><span class="line">var arrayLong: LongArray = longArrayOf(<span class="number">1000L</span>, <span class="number">2000L</span>, <span class="number">3000L</span>, <span class="number">4000L</span>)</span><br><span class="line">var arrayFloat: FloatArray = floatArrayOf(<span class="number">0.1f</span>, <span class="number">0.2f</span>, <span class="number">0.3f</span>, <span class="number">0.4f</span>)</span><br><span class="line">var arrayDouble: DoubleArray = doubleArrayOf(<span class="number">0.1</span>, <span class="number">0.2</span>, <span class="number">0.3</span>, <span class="number">0.4</span>)</span><br></pre></td></tr></table></figure></p>
+<h1 id="Layout-resource-file"><a href="#Layout-resource-file" class="headerlink" title="Layout resource file"></a>Layout resource file</h1><blockquote>
+<p>텍스트를 입력할 EditText, 클릭하면 음성 출력을 실행시킬 버튼으로 구성</p>
 </blockquote>
-<hr>
-<blockquote>
-<p>클래스와 속성 이해하기<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Java class</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> gender; <span class="comment">// 0은 여자, 1은 남자</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age, <span class="keyword">boolean</span> gender)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.gender = gender;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> name; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123; <span class="keyword">this</span>.name = name; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> age; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123; <span class="keyword">this</span>.age = age; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isGender</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> gender; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setGender</span><span class="params">(<span class="keyword">boolean</span> gender)</span> </span>&#123; <span class="keyword">this</span>.gender = gender; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//activity_main.xml</span></span><br><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span>?&gt;</span><br><span class="line">&lt;android.support.constraint.ConstraintLayout</span><br><span class="line">    xmlns:android=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    xmlns:app=<span class="string">"http://schemas.android.com/apk/res-auto"</span></span><br><span class="line">    xmlns:tools=<span class="string">"http://schemas.android.com/tools"</span></span><br><span class="line">    android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">    android:layout_height=<span class="string">"match_parent"</span></span><br><span class="line">    tools:context=<span class="string">".MainActivity"</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;LinearLayout</span><br><span class="line">        android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:orientation=<span class="string">"vertical"</span></span><br><span class="line">        app:layout_constraintBottom_toBottomOf=<span class="string">"parent"</span></span><br><span class="line">        app:layout_constraintLeft_toLeftOf=<span class="string">"parent"</span></span><br><span class="line">        app:layout_constraintRight_toRightOf=<span class="string">"parent"</span></span><br><span class="line">        app:layout_constraintTop_toTopOf=<span class="string">"parent"</span>&gt;</span><br><span class="line"></span><br><span class="line">        &lt;EditText</span><br><span class="line">            android:id=<span class="string">"@+id/edt_speech"</span></span><br><span class="line">            android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">            android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">            android:hint=<span class="string">"텍스트를 입력하세요."</span>/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;Button</span><br><span class="line">            android:id=<span class="string">"@+id/btn_ent"</span></span><br><span class="line">            style=<span class="string">"@style/Widget.AppCompat.Button.Borderless.Colored"</span></span><br><span class="line">            android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">            android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">            android:text=<span class="string">"Speak"</span>/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/LinearLayout&gt;</span><br><span class="line"></span><br><span class="line">&lt;/android.support.constraint.ConstraintLayout&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="TTS-생성-및-초기화"><a href="#TTS-생성-및-초기화" class="headerlink" title="TTS 생성 및 초기화"></a>TTS 생성 및 초기화</h1><blockquote>
+<p>TTS를 생성하고 OnInitListener로 초기화</p>
 </blockquote>
-<ul>
-<li>2개의 생성자, 3개의 Properties와 Setter/Getter… 늘 이런식으로 클래스를 만들어야만 했다.</li>
-<li>Kotlin은 정말 심플하게 클래스를 정의할 수 있다.</li>
-<li><p>단 1줄 이면 가능하다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Kotlin class</span></span><br><span class="line">class Person(var name: String, var age: Int, var gender: Boolean)</span><br><span class="line"></span><br><span class="line"><span class="function">fun <span class="title">main</span><span class="params">(args: Array&lt;String&gt;)</span> </span>&#123;</span><br><span class="line">    var person = Person(<span class="string">"Mozz"</span>, <span class="number">28</span>, <span class="keyword">false</span>)</span><br><span class="line">    println(<span class="string">"Before"</span>)</span><br><span class="line">    println(<span class="string">"Person.Person 이름 : $&#123;person.name&#125;"</span>)</span><br><span class="line">    println(<span class="string">"Person.Person 나이 : $&#123;person.age&#125;"</span>)</span><br><span class="line">    println(<span class="string">"Person.Person 성별 : $&#123;person.gender&#125;"</span>)</span><br><span class="line"></span><br><span class="line">    println()</span><br><span class="line"></span><br><span class="line">    person = Person(<span class="string">"Mily"</span>, <span class="number">18</span>, <span class="keyword">true</span>)</span><br><span class="line">    println(<span class="string">"After..."</span>)</span><br><span class="line">    person.age = <span class="number">10</span></span><br><span class="line">    person.name = <span class="string">"Mily"</span></span><br><span class="line">    person.gender = <span class="keyword">true</span></span><br><span class="line">    println(<span class="string">"Person.Person 이름 : $&#123;person.name&#125;"</span>)</span><br><span class="line">    println(<span class="string">"Person.Person 나이 : $&#123;person.age&#125;"</span>)</span><br><span class="line">    println(<span class="string">"Person.Person 성별 : $&#123;person.gender&#125;"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>예제 만들기</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Rectangle(val height: Int, val width: Int) &#123;</span><br><span class="line">    val isRectangle: Boolean</span><br><span class="line">        get() = height == width</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Random</span><br><span class="line"></span><br><span class="line"><span class="function">fun <span class="title">main</span><span class="params">(args: Array&lt;String&gt;)</span> </span>&#123;</span><br><span class="line">    val random = Random()</span><br><span class="line">    val rectangle = Rectangle(random.nextInt(), random.nextInt())</span><br><span class="line">    println(<span class="string">"높이? $&#123;rectangle.height&#125;"</span>)</span><br><span class="line">    println(<span class="string">"넓이? $&#123;rectangle.width&#125;"</span>)</span><br><span class="line">    println(<span class="string">"직사각형? $&#123;rectangle.isRectangle&#125;"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>높이? 1009213259</p>
-</li>
-<li>넓이? -259066241</li>
-<li>직사각형? false (직사각형이 될 일이 있을까?)</li>
-</ul>
-<p>오늘은 여기까지…….</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> Button btnEnter;</span><br><span class="line"><span class="keyword">private</span> EditText edtSpeech;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> TextToSpeech textToSpeech;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">    textToSpeech = <span class="keyword">new</span> TextToSpeech(<span class="keyword">this</span>, <span class="keyword">new</span> TextToSpeech.OnInitListener() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onInit</span><span class="params">(<span class="keyword">int</span> status)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (status == TextToSpeech.SUCCESS) &#123;</span><br><span class="line">                <span class="comment">//사용할 언어를 설정</span></span><br><span class="line">                <span class="keyword">int</span> result = textToSpeech.setLanguage(Locale.KOREA);</span><br><span class="line">                <span class="comment">//언어 데이터가 없거나 혹은 언어가 지원하지 않으면...</span></span><br><span class="line">                <span class="keyword">if</span> (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) &#123;</span><br><span class="line">                    Toast.makeText(MainActivity.<span class="keyword">this</span>, <span class="string">"이 언어는 지원하지 않습니다."</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    btnEnter.setEnabled(<span class="keyword">true</span>);</span><br><span class="line">                    <span class="comment">//음성 톤</span></span><br><span class="line">                    textToSpeech.setPitch(<span class="number">0.7f</span>);</span><br><span class="line">                    <span class="comment">//읽는 속도</span></span><br><span class="line">                    textToSpeech.setSpeechRate(<span class="number">1.2f</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    edtSpeech = (EditText) findViewById(R.id.edt_speech);</span><br><span class="line">    btnEnter = (Button) findViewById(R.id.btn_ent);</span><br><span class="line">    btnEnter.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">            Speech();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Speech</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String text = edtSpeech.getText().toString();</span><br><span class="line">    <span class="comment">// QUEUE_FLUSH: Queue 값을 초기화한 후 값을 넣는다.</span></span><br><span class="line">    <span class="comment">// QUEUE_ADD: 현재 Queue에 값을 추가하는 옵션이다.</span></span><br><span class="line">    <span class="comment">// API 21</span></span><br><span class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.LOLLIPOP)</span><br><span class="line">        textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, <span class="keyword">null</span>, <span class="keyword">null</span>);</span><br><span class="line">    <span class="comment">// API 20</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, <span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 메모리 누출을 방지하게 위해 TTS를 중지</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.onStop();</span><br><span class="line">    <span class="keyword">if</span> (textToSpeech != <span class="keyword">null</span>) &#123;</span><br><span class="line">        textToSpeech.stop();</span><br><span class="line">        textToSpeech.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
         <footer class="article-footer">
@@ -220,7 +199,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="https://devmozz.github.io/2018/04/18/kotlin01/" data-id="cjgbaz2ny00054a2folcx9jmm" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://devmozz.github.io/2018/04/23/text-to-speech/" data-id="cjgbaz2o500094a2fctg5h7v0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -317,20 +296,10 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/2018/04/21/kotlin02/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Kotlin - Casting Object(객체 타입 변환)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2018/04/16/r2nrj/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/04/21/kotlin02/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Android - Retrofit and RxJava</p>
+        <p class="article-nav-title">Kotlin - Casting Object(객체 타입 변환)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -520,7 +489,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'devMozz';
     
     
-    var disqus_url = 'https://devmozz.github.io/2018/04/18/kotlin01/';
+    var disqus_url = 'https://devmozz.github.io/2018/04/23/text-to-speech/';
     
     (function() {
     var dsq = document.createElement('script');

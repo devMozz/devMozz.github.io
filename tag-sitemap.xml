@@ -30,13 +30,6 @@
     </url>
 
     <url>
-        <loc>https://devmozz.github.io/tags/Android/</loc>
-        <lastmod>2018-04-20T22:13:29.551Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://devmozz.github.io/tags/Kotlin/</loc>
         <lastmod>2018-04-20T22:13:29.551Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -95,6 +88,27 @@
     <url>
         <loc>https://devmozz.github.io/tags/Conversion/</loc>
         <lastmod>2018-04-20T22:13:29.551Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Android/</loc>
+        <lastmod>2018-04-22T21:44:00.744Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/TTS/</loc>
+        <lastmod>2018-04-22T21:44:00.744Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/TextToSpeech/</loc>
+        <lastmod>2018-04-22T21:44:00.744Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
