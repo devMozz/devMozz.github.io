@@ -30,85 +30,113 @@
     </url>
 
     <url>
-        <loc>https://devmozz.github.io/tags/Kotlin/</loc>
-        <lastmod>2018-04-20T22:13:29.551Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://devmozz.github.io/tags/Casting/</loc>
-        <lastmod>2018-04-20T22:13:29.551Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://devmozz.github.io/tags/Type/</loc>
-        <lastmod>2018-04-20T22:13:29.551Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://devmozz.github.io/tags/Object/</loc>
-        <lastmod>2018-04-20T22:13:29.551Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://devmozz.github.io/tags/Safe/</loc>
-        <lastmod>2018-04-20T22:13:29.551Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://devmozz.github.io/tags/Unsafe/</loc>
-        <lastmod>2018-04-20T22:13:29.551Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://devmozz.github.io/tags/Implicit/</loc>
-        <lastmod>2018-04-20T22:13:29.551Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://devmozz.github.io/tags/Explicit/</loc>
-        <lastmod>2018-04-20T22:13:29.551Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://devmozz.github.io/tags/Conversion/</loc>
-        <lastmod>2018-04-20T22:13:29.551Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://devmozz.github.io/tags/Android/</loc>
-        <lastmod>2018-04-22T21:44:00.744Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://devmozz.github.io/tags/TTS/</loc>
-        <lastmod>2018-04-22T21:44:00.744Z</lastmod>
+        <lastmod>2018-04-22T21:46:53.339Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://devmozz.github.io/tags/TextToSpeech/</loc>
-        <lastmod>2018-04-22T21:44:00.744Z</lastmod>
+        <lastmod>2018-04-22T21:46:53.339Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Casting/</loc>
+        <lastmod>2018-04-22T21:47:16.997Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Type/</loc>
+        <lastmod>2018-04-22T21:47:16.997Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Object/</loc>
+        <lastmod>2018-04-22T21:47:16.997Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Safe/</loc>
+        <lastmod>2018-04-22T21:47:16.997Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Unsafe/</loc>
+        <lastmod>2018-04-22T21:47:16.997Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Implicit/</loc>
+        <lastmod>2018-04-22T21:47:16.997Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Explicit/</loc>
+        <lastmod>2018-04-22T21:47:16.997Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Conversion/</loc>
+        <lastmod>2018-04-22T21:47:16.997Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Android/</loc>
+        <lastmod>2018-04-22T21:49:04.548Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Kotlin/</loc>
+        <lastmod>2018-04-22T21:49:04.548Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Function/</loc>
+        <lastmod>2018-04-22T21:49:04.548Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Variable/</loc>
+        <lastmod>2018-04-22T21:49:04.548Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Class/</loc>
+        <lastmod>2018-04-22T21:49:04.548Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://devmozz.github.io/tags/Properties/</loc>
+        <lastmod>2018-04-22T21:49:04.548Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
